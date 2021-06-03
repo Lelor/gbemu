@@ -12,7 +12,7 @@ void Motherboard::begin()
 {
     while(1)
     {
-        char opCode = m_Cartridge.getOpCode(m_CPU.stackPointer);
+        char opCode = m_Cartridge.getOpCode(m_CPU.programCounter);
         m_CPU.tick(opCode);
     }
 }
