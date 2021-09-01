@@ -1,11 +1,14 @@
 #include <iostream>
-#include "core/CPU.h"
+#include "core/Motherboard.h"
 
 
 
 int main()
 {
     std::cout << "hello, world" << std::endl;
-    CPU cpu = CPU(*(new RAM()));
+    RAM ram = RAM();
+    CPU cpu = CPU(ram);
+    Cartridge rom = Cartridge();
+    Motherboard mobo = Motherboard(ram, cpu, rom);
     return 0;
 };

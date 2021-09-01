@@ -7,12 +7,12 @@
 class Motherboard
 {
 public:
-    Motherboard(RAM& m_RAM);
+    Motherboard(RAM& m_RAM, CPU& m_CPU, Cartridge& m_Cartridge);
     void begin();
 
 private:
     RAM& m_RAM;
-    CPU m_CPU;
-    Cartridge m_Cartridge;
+    CPU& m_CPU;
+    Cartridge& m_Cartridge;
     // ~Motherboard();
 };

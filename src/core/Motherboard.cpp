@@ -1,11 +1,10 @@
 #include "Motherboard.h"
 
 
-Motherboard::Motherboard(RAM& m_RAM)
-:m_RAM(m_RAM)
+Motherboard::Motherboard(RAM& m_RAM, CPU& m_CPU, Cartridge& m_Cartridge)
+:m_RAM(m_RAM), m_CPU(m_CPU), m_Cartridge(m_Cartridge) 
 {
-    m_CPU = CPU(*m_RAM);
-    m_Cartridge = Cartridge();
+    // do something here?
 };
 
 void Motherboard::begin()
