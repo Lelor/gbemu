@@ -5,8 +5,9 @@
 class RAM
 {
 public:
-    Ram();
+    RAM();
 
 private:
+    // internal memory bank buffer
     std::vector<unsigned char*> bank;
 };
