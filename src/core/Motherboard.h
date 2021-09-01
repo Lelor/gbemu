@@ -1,17 +1,17 @@
 #pragma once
-#include "RAM.hpp"
-#include "CPU.hpp"
-#include "Cartridge.hpp"
+#include "RAM.h"
+#include "CPU.h"
+#include "Cartridge.h"
 
 
 class Motherboard
 {
 public:
-    Motherboard();
+    Motherboard(RAM& m_RAM);
     void begin();
 
 private:
-    RAM m_RAM;
+    RAM& m_RAM;
     CPU m_CPU;
     Cartridge m_Cartridge;
     // ~Motherboard();

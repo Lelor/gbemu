@@ -1,10 +1,10 @@
-#include "Motherboard.hpp"
+#include "Motherboard.h"
 
 
-Motherboard::Motherboard()
+Motherboard::Motherboard(RAM& m_RAM)
+:m_RAM(m_RAM)
 {
-    m_RAM = RAM();
-    m_CPU = CPU(&m_RAM);
+    m_CPU = CPU(*m_RAM);
     m_Cartridge = Cartridge();
 };
 
