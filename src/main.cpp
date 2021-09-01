@@ -1,6 +1,8 @@
 #include <iostream>
 #include "core/Motherboard.h"
-
+#include "core/RAM.h"
+#include "core/CPU.h"
+#include "core/Cartridge.h"
 
 
 int main()
